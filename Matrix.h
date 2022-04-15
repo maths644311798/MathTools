@@ -1,3 +1,5 @@
+#ifndef LASSOREGRESSION_MATRIX_H
+#define LASSOREGRESSION_MATRIX_H
 #include <cmath>
 #include <iostream>
 #include <vector>
@@ -29,6 +31,7 @@ public:
 
     Matrix& operator=(const Matrix& second_matrix)
     {
+        data.clear();
         m = second_matrix.m;
         n = second_matrix.n;
         for (int i = 0; i < m; ++i)
@@ -81,3 +84,5 @@ Matrix& operator*(const Matrix& A, const Matrix& B)
     }
     return res;
 }
+
+#endif //LASSOREGRESSION_MATRIX_H
