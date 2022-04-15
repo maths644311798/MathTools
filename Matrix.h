@@ -45,7 +45,7 @@ public:
     }
 };
 
-Matrix& operator+(const Matrix& A,const Matrix& B)
+Matrix operator+(const Matrix& A,const Matrix& B)
 {
     Matrix res(A);
     if (A.m == B.m && A.n == B.n)
@@ -63,7 +63,7 @@ Matrix& operator+(const Matrix& A,const Matrix& B)
     return res;
 }
 
-Matrix& operator*(const Matrix& A, const Matrix& B)
+Matrix operator*(const Matrix& A, const Matrix& B)
 {
     Matrix res(A.m, B.n);
     if (A.n == B.m)
@@ -83,6 +83,17 @@ Matrix& operator*(const Matrix& A, const Matrix& B)
         cerr << "Matrix parameters do not match\n";
     }
     return res;
+}
+
+double norm(vector<double> vec) 
+{
+    int vectorSize = vec.size();
+    double result = 0.0;
+    for (int idx = 0; idx < vectorSize; ++idx) 
+    {
+        result += pow(vec[idx], 2);
+    }
+    return sqrt(result);
 }
 
 #endif //LASSOREGRESSION_MATRIX_H
