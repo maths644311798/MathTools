@@ -1,4 +1,8 @@
-
+/*
+A Generalized Young Tableau is like
+1 1
+2
+*/
 #include<vector>
 #include<cstdio>
 #include<cmath>
