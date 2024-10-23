@@ -1,0 +1,54 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+%\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amssymb}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+
+\title{Elliptic Curve}
+\author{Functor}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A note for elliptic curves. Refer to \cite{Hartshorne1977, EGA} for details.
+\end{abstract}
+
+\section{Basic Property}
+
+  A curve is a one-dimensional, integral and separated scheme of finite type over an algebraically closed field $k$. In this note, a curve $X$ always means it is complete and nonsingular (consistent with the definition in Chapter IV of \cite{Hartshorne1977}). The arithmetic genus $p_a(X)$ and the geometric genus $p_g(X)$ equal, and equal $\dim_k H^1(X,O_X)$ \cite{Hartshorne1977}[Chapter IV, 1.1]. In this case, the canonical sheaf $\omega_X = \Omega_X$. Choose one divisor $K$ in the corresponding linear equivalence class, called a canonical divisor.
+
+  The only curve that has genus $0$ is $P^1$ (IV, 1.3.5 from \cite{Hartshorne1977}).
+
+\begin{definition}[Elliptic Curve]
+ An elliptic curve is a curve with genus $g = 1$.
+\end{definition}
+
+On an elliptic curve, $\deg K = 0$. $l(K) = 1$ and $K \sim 0$.
+
+Since the genus of an elliptic curve is $1$, it can not be isomorphic to $P^1$, whose genus is $0$.
+
+An equivalent definition of elliptic curves is nonsingular plane cubic curves \cite{Hartshorne1977}. 
+
+The group structure of elliptic curves used in cryptography is the kernel of the degree homomorphism. See Example 6.10.2 and 6.11.4 in \cite{Hartshorne1977}. Actually, the group structure makes the elliptic curves become group variety.
+
+
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
